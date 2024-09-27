@@ -1,0 +1,28 @@
+@use './functions' as *;
+
+$clr-red: hsl(0, 78%, 62%);
+$clr-cyan: hsl(180, 62%, 55%);
+$clr-orange: hsl(34, 97%, 64%);
+$clr-blue: hsl(212, 86%, 64%);
+$clr-very-dark-blue: hsl(234, 12%, 34%);
+$clr-grayish-blue: hsl(229, 6%, 66%);
+$clr-very-light-gray: hsl(0, 0%, 98%);
+$clr-white: hsl(0, 0%, 100%);
+
+$fs-1: pxToRem(15);
+$fs-2: pxToRem(13);
+
+
+$ff-body: "Poppins", sans-serif;
+
+$fw-extralight: 200;
+$fw-regular: 400;
+$fw-semibold: 600;
+
+$space-sm: pxToRem(20);
+$space-md: pxToRem(23);
+$space-lg: pxToRem(28);
+$space-xl: pxToRem(32);
+
+$box-shadow: 0 15px 30px -11px rgba(131, 166, 210, 0.5);
+$border-radius: pxToRem(8);
