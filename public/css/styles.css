@@ -1,1 +1,81 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
 
+* {
+  margin: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  padding: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.tools {
+  max-inline-size: 311px;
+}
+
+.intro {
+  text-align: center;
+  margin-block-end: 76px;
+}
+
+.intro__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: 0.007em;
+  margin-block-end: 16px;
+}
+.intro__title span {
+  font-weight: 200;
+}
+
+.intro__description {
+  letter-spacing: -0.4px;
+  line-height: 1.55;
+}
+
+.cards {
+  display: grid;
+  gap: 24px;
+}
+
+.card {
+  border-top: 4px solid black;
+  border-radius: 5px;
+  padding: 22px 29px 28px;
+  box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
+}
+.card h2 {
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+  margin-block-end: 3px;
+}
+.card p {
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  line-height: 1.9;
+  margin-block-end: 32px;
+}
+.card img {
+  margin-left: auto;
+}

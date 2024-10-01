@@ -1,0 +1,69 @@
+@use 'reset' as *;
+@use 'variables' as *;
+// @use 'mixins' as *;
+
+
+body {
+  font-family: $ff-body;
+  padding: $space-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: hsl(0, 0%, 98%);
+}
+
+.tools {
+  max-inline-size: 311px;
+}
+
+.intro {
+  text-align: center;
+  // border: 1px solid #000;
+  margin-block-end: 76px;
+}
+.intro__title {
+  font-size: $fs-3;
+  font-weight: $fw-semibold;
+  letter-spacing: 0.007em;
+  margin-block-end: 16px;
+  span {
+    font-weight: $fw-extralight;
+  }
+}
+
+.intro__description {
+  letter-spacing: -0.4px;
+  line-height: 1.55;
+  
+}
+
+.cards {
+  display: grid;
+  gap: 24px;
+}
+
+.card {
+  border-top: 4px solid black;
+  border-radius: 5px;
+  padding: 22px 29px 28px;
+  box-shadow: $box-shadow;
+
+  h2 {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: -0.1px;
+    margin-block-end: 3px;
+  }
+  p {
+    font-size: 12px;
+    letter-spacing: 0.6px;
+    line-height: 1.9;
+    margin-block-end: 32px;
+  }
+  img {
+    margin-left: auto;
+  }
+}
+
+
+
