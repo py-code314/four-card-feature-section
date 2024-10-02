@@ -9,9 +9,9 @@ $clr-grayish-blue: rgb(163, 165, 174);
 $clr-very-light-gray: hsl(0, 0%, 98%);
 $clr-white: hsl(0, 0%, 100%);
 
-$fs-1: pxToRem(15);
-$fs-2: pxToRem(13);
-$fs-3: pxToRem(24);
+$fs-body: pxToRem(15);
+$fs-card: pxToRem(12);
+$fs-title: pxToRem(24);
 $fs-h2: pxToRem(20);
 
 
@@ -26,10 +26,11 @@ $space-3xs: pxToRem(8);
 $space-2xs: pxToRem(14);
 $space-xs: pxToRem(16);
 $space-sm: pxToRem(20);
-$space-md: pxToRem(24);
-$space-lg: pxToRem(28);
-$space-xl: pxToRem(32);
-$space-2xl: pxToRem(75);
+$space-md: pxToRem(22);
+$space-lg: pxToRem(24);
+$space-xl: pxToRem(28);
+$space-2xl: pxToRem(32);
+$space-3xl: pxToRem(75);
 
 $card-width-mobile: pxToRem(311);
 
