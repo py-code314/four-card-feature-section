@@ -1,6 +1,6 @@
 @use 'reset' as *;
 @use 'variables' as *;
-// @use 'mixins' as *;
+@use 'mixins' as *;
 
 
 body {
@@ -9,7 +9,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsl(0, 0%, 98%);
+  background-color: $clr-bg-body;
+  color: $clr-body-text;
   
 }
 
@@ -25,6 +26,7 @@ body {
 .intro__title {
   font-size: $fs-title;
   font-weight: $fw-semibold;
+  color: $clr-title;
   letter-spacing: 0.007em;
   margin-block-end: $space-xs;
   span {
@@ -40,21 +42,25 @@ body {
 
 .cards {
   display: grid;
-  gap: $space-lg;
-  
+  gap: $space-lg;  
 }
 
+
 .card {
-  display: flex;
-  flex-direction: column;
-  padding: $space-md $space-xl $space-xl;
-  gap: $space-2xl;
-  box-shadow: $box-shadow;
-  border-radius: 7px;
-  border-top: $space-4xs solid black;
-  
-  
-  
+
+  &:nth-child(1) {
+    @include card($clr-cyan)
+  }
+  &:nth-child(2) {
+    @include card($clr-red)
+  }
+  &:nth-child(3) {
+    @include card($clr-orange)
+  }
+  &:nth-child(4) {
+    @include card($clr-blue)
+  }
+   
   img {
     align-self: end;
     
@@ -64,6 +70,7 @@ body {
 .card__details {
   h2 {
     font-size: $fs-h2;
+    color: $clr-title;
     margin-block-end: $space-4xs;
   }
   p {

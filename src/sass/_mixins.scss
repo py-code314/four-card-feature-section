@@ -1,0 +1,12 @@
+@use 'variables' as *;
+
+@mixin card($color) {
+  display: flex;
+  flex-direction: column;
+  padding: $space-md $space-xl $space-xl;
+  gap: $space-2xl;
+  background-color: $clr-white;
+  box-shadow: $box-shadow;
+  border-radius: 7px;
+  border-top: $space-4xs solid $color;
+}
