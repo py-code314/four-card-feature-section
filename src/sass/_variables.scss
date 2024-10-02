@@ -12,6 +12,7 @@ $clr-white: hsl(0, 0%, 100%);
 $fs-1: pxToRem(15);
 $fs-2: pxToRem(13);
 $fs-3: pxToRem(24);
+$fs-h2: pxToRem(20);
 
 
 $ff-body: "Poppins", sans-serif;
@@ -20,6 +21,7 @@ $fw-extralight: 200;
 $fw-regular: 400;
 $fw-semibold: 600;
 
+$space-4xs: pxToRem(4);
 $space-3xs: pxToRem(8);
 $space-2xs: pxToRem(14);
 $space-xs: pxToRem(16);
@@ -27,6 +29,9 @@ $space-sm: pxToRem(20);
 $space-md: pxToRem(24);
 $space-lg: pxToRem(28);
 $space-xl: pxToRem(32);
+$space-2xl: pxToRem(75);
+
+$card-width-mobile: pxToRem(311);
 
 $box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
 $border-radius: pxToRem(8);

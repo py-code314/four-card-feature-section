@@ -10,60 +10,68 @@ body {
   align-items: center;
   justify-content: center;
   background-color: hsl(0, 0%, 98%);
+  
 }
 
 .tools {
-  max-inline-size: 311px;
+  max-inline-size: $card-width-mobile;
 }
 
 .intro {
   text-align: center;
-  // border: 1px solid #000;
-  margin-block-end: 76px;
+  margin-block-end: $space-2xl;
 }
 .intro__title {
   font-size: $fs-3;
   font-weight: $fw-semibold;
   letter-spacing: 0.007em;
-  margin-block-end: 16px;
+  margin-block-end: $space-xs;
   span {
     font-weight: $fw-extralight;
   }
 }
 
 .intro__description {
-  letter-spacing: -0.4px;
-  line-height: 1.55;
-  
+  letter-spacing: 0.1px;
+  line-height: 1.65;
+  font-size: 15px;
 }
 
 .cards {
   display: grid;
   gap: 24px;
+  
 }
 
 .card {
-  border-top: 4px solid black;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
   padding: 22px 29px 28px;
+  gap: 32px;
   box-shadow: $box-shadow;
+  border-radius: 7px;
+  border-top: 4px solid black;
+  
+  
+  
+  img {
+    align-self: end;
+    
+  }
+}
 
+.card__details {
   h2 {
     font-size: 20px;
-    font-weight: 600;
-    letter-spacing: -0.1px;
-    margin-block-end: 3px;
+    margin-block-end: 4px;
   }
   p {
     font-size: 12px;
     letter-spacing: 0.6px;
-    line-height: 1.9;
-    margin-block-end: 32px;
-  }
-  img {
-    margin-left: auto;
+    line-height: 1.85;
   }
 }
+
 
 
 

@@ -30,27 +30,28 @@ body {
 }
 
 .tools {
-  max-inline-size: 311px;
+  max-inline-size: 19.4375rem;
 }
 
 .intro {
   text-align: center;
-  margin-block-end: 76px;
+  margin-block-end: 4.6875rem;
 }
 
 .intro__title {
   font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.007em;
-  margin-block-end: 16px;
+  margin-block-end: 1rem;
 }
 .intro__title span {
   font-weight: 200;
 }
 
 .intro__description {
-  letter-spacing: -0.4px;
-  line-height: 1.55;
+  letter-spacing: 0.1px;
+  line-height: 1.65;
+  font-size: 15px;
 }
 
 .cards {
@@ -59,23 +60,24 @@ body {
 }
 
 .card {
-  border-top: 4px solid black;
-  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
   padding: 22px 29px 28px;
+  gap: 32px;
   box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-}
-.card h2 {
-  font-size: 20px;
-  font-weight: 600;
-  letter-spacing: -0.1px;
-  margin-block-end: 3px;
-}
-.card p {
-  font-size: 12px;
-  letter-spacing: 0.6px;
-  line-height: 1.9;
-  margin-block-end: 32px;
+  border-radius: 7px;
+  border-top: 4px solid black;
 }
 .card img {
-  margin-left: auto;
+  align-self: end;
+}
+
+.card__details h2 {
+  font-size: 20px;
+  margin-block-end: 4px;
+}
+.card__details p {
+  font-size: 12px;
+  letter-spacing: 0.6px;
+  line-height: 1.85;
 }
