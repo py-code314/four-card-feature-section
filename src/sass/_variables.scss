@@ -1,19 +1,19 @@
 @use './functions' as *;
 
+$clr-bg-body: hsl(0, 0%, 98%);
+$clr-title: hsl(234, 12%, 34%);
+$clr-body-text: hsl(229, 6%, 66%);
+$clr-white: hsl(0, 0%, 100%);
 $clr-red: hsl(0, 78%, 62%);
 $clr-cyan: hsl(180, 62%, 55%);
 $clr-orange: hsl(34, 97%, 64%);
 $clr-blue: hsl(212, 86%, 64%);
-$clr-title: hsl(234, 12%, 34%);
-$clr-body-text: hsl(229, 6%, 66%);
-$clr-bg-body: hsl(0, 0%, 98%);
-$clr-white: hsl(0, 0%, 100%);
 
-$fs-body: pxToRem(15);
 $fs-card: pxToRem(12);
-$fs-title: pxToRem(24);
+$fs-body: pxToRem(15);
 $fs-h2: pxToRem(20);
-
+$fs-title-mobile: pxToRem(24);
+$fs-title-laptop: pxToRem(36);
 
 $ff-body: "Poppins", sans-serif;
 
@@ -29,10 +29,15 @@ $space-sm: pxToRem(20);
 $space-md: pxToRem(22);
 $space-lg: pxToRem(24);
 $space-xl: pxToRem(28);
-$space-2xl: pxToRem(32);
-$space-3xl: pxToRem(75);
+$space-2xl: pxToRem(30);
+$space-3xl: pxToRem(32);
+$space-4xl: pxToRem(40);
+$space-5xl: pxToRem(62);
+$space-6xl: pxToRem(75);
 
+$image-width-laptop: pxToRem(64);
 $card-width-mobile: pxToRem(311);
+$card-width-laptop: pxToRem(1111);
 
 $box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-$border-radius: pxToRem(8);
+$border-radius: pxToRem(7);

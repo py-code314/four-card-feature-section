@@ -33,10 +33,20 @@ body {
 .ai-tools {
   max-inline-size: 19.4375rem;
 }
+@media (min-width: 62.5em) {
+  .ai-tools {
+    max-inline-size: 69.4375rem;
+  }
+}
 
 .intro {
   text-align: center;
   margin-block-end: 4.6875rem;
+}
+@media (min-width: 62.5em) {
+  .intro {
+    margin-block-end: 3.875rem;
+  }
 }
 
 .intro__title {
@@ -49,16 +59,39 @@ body {
 .intro__title span {
   font-weight: 200;
 }
+@media (min-width: 62.5em) {
+  .intro__title {
+    font-size: 2.25rem;
+    line-height: 1.45;
+  }
+  .intro__title span {
+    display: block;
+  }
+}
 
 .intro__description {
   letter-spacing: 0.007em;
   line-height: 1.65;
   font-size: 0.9375rem;
 }
+@media (min-width: 62.5em) {
+  .intro__description {
+    max-inline-size: 55ch;
+    margin-inline: auto;
+  }
+}
 
 .cards {
   display: grid;
   gap: 1.5rem;
+}
+@media (min-width: 62.5em) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas: ". team ." "supervisor team calculator" "supervisor karma calculator" ". karma .";
+    gap: 1.875rem;
+  }
 }
 
 .card:nth-child(1) {
@@ -68,8 +101,21 @@ body {
   gap: 2rem;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   border-top: 0.25rem solid hsl(180, 62%, 55%);
+}
+@media (min-width: 62.5em) {
+  .card:nth-child(1) {
+    grid-area: supervisor;
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem 2rem 2rem;
+    gap: 2.5rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
+    border-radius: 0.4375rem;
+    border-top: 0.25rem solid hsl(180, 62%, 55%);
+  }
 }
 .card:nth-child(2) {
   display: flex;
@@ -78,8 +124,21 @@ body {
   gap: 2rem;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   border-top: 0.25rem solid hsl(0, 78%, 62%);
+}
+@media (min-width: 62.5em) {
+  .card:nth-child(2) {
+    grid-area: team;
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem 2rem 2rem;
+    gap: 2.5rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
+    border-radius: 0.4375rem;
+    border-top: 0.25rem solid hsl(0, 78%, 62%);
+  }
 }
 .card:nth-child(3) {
   display: flex;
@@ -88,8 +147,21 @@ body {
   gap: 2rem;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   border-top: 0.25rem solid hsl(34, 97%, 64%);
+}
+@media (min-width: 62.5em) {
+  .card:nth-child(3) {
+    grid-area: karma;
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem 2rem 2rem;
+    gap: 2.5rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
+    border-radius: 0.4375rem;
+    border-top: 0.25rem solid hsl(34, 97%, 64%);
+  }
 }
 .card:nth-child(4) {
   display: flex;
@@ -98,11 +170,29 @@ body {
   gap: 2rem;
   background-color: hsl(0, 0%, 100%);
   box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-  border-radius: 7px;
+  border-radius: 0.4375rem;
   border-top: 0.25rem solid hsl(212, 86%, 64%);
+}
+@media (min-width: 62.5em) {
+  .card:nth-child(4) {
+    grid-area: calculator;
+    display: flex;
+    flex-direction: column;
+    padding: 1.75rem 2rem 2rem;
+    gap: 2.5rem;
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
+    border-radius: 0.4375rem;
+    border-top: 0.25rem solid hsl(212, 86%, 64%);
+  }
 }
 .card img {
   align-self: end;
+}
+@media (min-width: 62.5em) {
+  .card img {
+    width: 4rem;
+  }
 }
 
 .card__details h2 {
@@ -110,8 +200,18 @@ body {
   color: hsl(234, 12%, 34%);
   margin-block-end: 0.25rem;
 }
+@media (min-width: 62.5em) {
+  .card__details h2 {
+    margin-block-end: 0.5rem;
+  }
+}
 .card__details p {
   font-size: 0.75rem;
   letter-spacing: 0.05em;
   line-height: 1.85;
+}
+@media (min-width: 62.5em) {
+  .card__details p {
+    line-height: 1.9;
+  }
 }
