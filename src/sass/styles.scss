@@ -122,7 +122,7 @@ body {
     align-self: end;
     // Media query at 1000px //
     @include laptop {
-      max-width: $image-width-laptop;
+      width: $image-width-laptop;
     }
   }
 }

@@ -199,7 +199,7 @@ body {
 }
 @media (min-width: 62.5em) {
   .card img {
-    max-width: 4rem;
+    width: 4rem;
   }
 }
 
