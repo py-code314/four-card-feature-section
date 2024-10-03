@@ -1,3 +1,4 @@
+/* Global Reset */
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -20,6 +21,7 @@ p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
 
+/* Styles for body */
 body {
   font-family: "Poppins", sans-serif;
   padding: 5rem 1.5rem;
@@ -30,6 +32,7 @@ body {
   color: hsl(229, 6%, 66%);
 }
 
+/* Max-width for the whole layout */
 .ai-tools {
   max-inline-size: 19.4375rem;
 }
@@ -39,6 +42,7 @@ body {
   }
 }
 
+/* Styles for intro section*/
 .intro {
   text-align: center;
   margin-block-end: 4.6875rem;
@@ -49,6 +53,7 @@ body {
   }
 }
 
+/* Styles for page title */
 .intro__title {
   font-size: 1.5rem;
   font-weight: 600;
@@ -69,6 +74,7 @@ body {
   }
 }
 
+/* Styles for page description */
 .intro__description {
   letter-spacing: 0.007em;
   line-height: 1.65;
@@ -81,6 +87,7 @@ body {
   }
 }
 
+/* Grid layout for cards */
 .cards {
   display: grid;
   gap: 1.5rem;
@@ -94,6 +101,7 @@ body {
   }
 }
 
+/* Styling for an individual card */
 .card:nth-child(1) {
   display: flex;
   flex-direction: column;

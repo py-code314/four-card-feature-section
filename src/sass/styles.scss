@@ -1,8 +1,9 @@
+// Import partials
 @use 'reset' as *;
 @use 'variables' as *;
 @use 'mixins' as *;
 
-
+/* Styles for body */
 body {
   font-family: $ff-body;
   padding: $space-7xl $space-lg;
@@ -13,23 +14,26 @@ body {
   color: $clr-body-text;  
 }
 
+/* Max-width for the whole layout */
 .ai-tools {
   max-inline-size: $card-width-mobile;
-
+  // Media query at 1000px //
   @include laptop {
     max-inline-size: $card-width-laptop;
   }
 }
 
+/* Styles for intro section*/
 .intro {
   text-align: center;
   margin-block-end: $space-6xl;
-
+  // Media query at 1000px //
   @include laptop {
     margin-block-end: $space-5xl;
   }
 }
 
+/* Styles for page title */
 .intro__title {
   font: {
     size: $fs-title-mobile;
@@ -41,7 +45,7 @@ body {
   span {
     font-weight: $fw-extralight;
   }
-
+  // Media query at 1000px //
   @include laptop {
     span {
       display: block;
@@ -51,21 +55,23 @@ body {
   }
 }
 
+/* Styles for page description */
 .intro__description {
   letter-spacing: 0.007em;
   line-height: 1.65;
   font-size: $fs-body;
-
+  // Media query at 1000px //
   @include laptop {
     max-inline-size: 55ch;
     margin-inline: auto;
   }
 }
 
+/* Grid layout for cards */
 .cards {
   display: grid;
   gap: $space-lg;  
-
+  // Media query at 1000px //
   @include laptop {
     grid-template: {
     columns: repeat(3, 1fr);
@@ -81,9 +87,8 @@ body {
   }
 }
 
-
+/* Styling for an individual card */
 .card {
-
   &:nth-child(1) {
     @include card-mobile($clr-cyan);
     @include laptop {
@@ -115,7 +120,7 @@ body {
    
   img {
     align-self: end;
-    
+    // Media query at 1000px //
     @include laptop {
       max-width: $image-width-laptop;
     }
@@ -127,7 +132,7 @@ body {
     font-size: $fs-h2;
     color: $clr-title;
     margin-block-end: $space-4xs;
-
+    // Media query at 1000px //
     @include laptop {
       margin-block-end: $space-3xs;
     }
@@ -136,7 +141,7 @@ body {
     font-size: $fs-card;
     letter-spacing: 0.05em;
     line-height: 1.85;
-
+    // Media query at 1000px //
     @include laptop {
       line-height: 1.9;
     }

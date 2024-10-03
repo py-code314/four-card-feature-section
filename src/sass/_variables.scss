@@ -1,5 +1,7 @@
+// Import functions
 @use './functions' as *;
 
+// Colors
 $clr-bg-body: hsl(0, 0%, 98%);
 $clr-title: hsl(234, 12%, 34%);
 $clr-body-text: hsl(229, 6%, 66%);
@@ -9,6 +11,8 @@ $clr-cyan: hsl(180, 62%, 55%);
 $clr-orange: hsl(34, 97%, 64%);
 $clr-blue: hsl(212, 86%, 64%);
 
+
+// Typography
 $fs-card: pxToRem(12);
 $fs-body: pxToRem(15);
 $fs-h2: pxToRem(20);
@@ -21,6 +25,8 @@ $fw-extralight: 200;
 $fw-regular: 400;
 $fw-semibold: 600;
 
+
+// Spacing
 $space-4xs: pxToRem(4);
 $space-3xs: pxToRem(8);
 $space-2xs: pxToRem(14);
@@ -40,5 +46,6 @@ $image-width-laptop: pxToRem(64);
 $card-width-mobile: pxToRem(311);
 $card-width-laptop: pxToRem(1111);
 
+// Utilities
 $box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
 $border-radius: pxToRem(7);

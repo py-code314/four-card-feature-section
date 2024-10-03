@@ -1,5 +1,7 @@
+// Import variables
 @use 'variables' as *;
 
+// Styling for cards - mobile
 @mixin card-mobile($color) {
   display: flex;
   flex-direction: column;
@@ -11,6 +13,7 @@
   border-top: $space-4xs solid $color;
 }
 
+// Styling for cards - laptop
 @mixin card-laptop($color) {
   display: flex;
   flex-direction: column;
@@ -22,6 +25,7 @@
   border-top: $space-4xs solid $color;
 }
 
+// Media query at 1000px
 @mixin laptop {
   @media (min-width: 62.5em) {
     @content;
