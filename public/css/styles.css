@@ -22,7 +22,7 @@ p, h1, h2, h3, h4, h5, h6 {
 
 body {
   font-family: "Poppins", sans-serif;
-  padding: 1rem;
+  padding: 5rem 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,7 +89,7 @@ body {
   .cards {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
-    grid-template-areas: ". team ." "supervisor team calculator" "supervisor karma calculator" ". karma .";
+    grid-template-areas: "... team ..." "supervisor team calculator" "supervisor karma calculator" "... karma ...";
     gap: 1.875rem;
   }
 }
@@ -191,7 +191,7 @@ body {
 }
 @media (min-width: 62.5em) {
   .card img {
-    width: 4rem;
+    max-width: 4rem;
   }
 }
 

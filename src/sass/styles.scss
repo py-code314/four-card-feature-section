@@ -5,13 +5,12 @@
 
 body {
   font-family: $ff-body;
-  padding: $space-xs;
+  padding: $space-7xl $space-lg;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $clr-bg-body;
-  color: $clr-body-text;
-  
+  color: $clr-body-text;  
 }
 
 .ai-tools {
@@ -32,8 +31,10 @@ body {
 }
 
 .intro__title {
-  font-size: $fs-title-mobile;
-  font-weight: $fw-semibold;
+  font: {
+    size: $fs-title-mobile;
+    weight: $fw-semibold;
+  }
   color: $clr-title;
   letter-spacing: 0.007em;
   margin-block-end: $space-xs;
@@ -66,14 +67,16 @@ body {
   gap: $space-lg;  
 
   @include laptop {
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-template-areas: 
-    '. team .'
+    grid-template: {
+    columns: repeat(3, 1fr);
+    rows: repeat(4, auto);
+    areas: 
+    '... team ...'
     'supervisor team calculator'
     'supervisor karma calculator'
-    '. karma .'
+    '... karma ...'
     ;
+    }
     gap: $space-2xl;
   }
 }
@@ -114,7 +117,7 @@ body {
     align-self: end;
     
     @include laptop {
-      width: $image-width-laptop;
+      max-width: $image-width-laptop;
     }
   }
 }
