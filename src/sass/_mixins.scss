@@ -2,28 +2,23 @@
 @use 'variables' as *;
 
 // Styling for cards - mobile
-@mixin card-mobile($color) {
+@mixin card {
   display: flex;
   flex-direction: column;
-  padding: $space-md $space-xl $space-xl;
-  gap: $space-3xl;
+  padding: $padding-top $padding-bottom $padding-bottom;
+  gap: $gap-card;
   background-color: $clr-white;
   box-shadow: $box-shadow;
   border-radius: $border-radius;
-  border-top: $space-4xs solid $color;
+  
 }
 
 // Styling for cards - laptop
-@mixin card-laptop($color) {
-  display: flex;
-  flex-direction: column;
-  padding: $space-xl $space-3xl $space-3xl;
-  gap: $space-4xl;
-  background-color: $clr-white;
-  box-shadow: $box-shadow;
-  border-radius: $border-radius;
-  border-top: $space-4xs solid $color;
-}
+// @mixin card-laptop {
+//   padding: $space-xl $space-3xl $space-3xl;
+//   gap: $space-4xl;
+  
+// }
 
 // Media query at 1000px
 @mixin laptop {

@@ -26,17 +26,13 @@ body {
 /* Styles for intro section*/
 .intro {
   text-align: center;
-  margin-block-end: $space-6xl;
-  // Media query at 1000px //
-  @include laptop {
-    margin-block-end: $space-5xl;
-  }
+  margin-block-end: $margin-intro;
 }
 
 /* Styles for page title */
 .intro__title {
   font: {
-    size: $fs-title-mobile;
+    size: $fs-h1;
     weight: $fw-semibold;
   }
   color: $clr-title;
@@ -44,14 +40,11 @@ body {
   margin-block-end: $space-xs;
   span {
     font-weight: $fw-extralight;
+    display: block;
   }
   // Media query at 1000px //
   @include laptop {
-    span {
-      display: block;
-    }
-    font-size: $fs-title-laptop;
-    line-height: 1.45;
+    line-height: 1.45; // Check to remove later
   }
 }
 
@@ -70,7 +63,7 @@ body {
 /* Grid layout for cards */
 .cards {
   display: grid;
-  gap: $space-lg;  
+  gap: $gap;  
   // Media query at 1000px //
   @include laptop {
     grid-template: {
@@ -83,38 +76,45 @@ body {
     '... karma ...'
     ;
     }
-    gap: $space-2xl;
   }
 }
 
 /* Styling for an individual card */
 .card {
+  @include card;
+  // @include laptop {
+  //   @include card-laptop;
+  // }
   &:nth-child(1) {
-    @include card-mobile($clr-cyan);
+    border-top: $space-4xs solid $clr-cyan;
     @include laptop {
       grid-area: supervisor;
-      @include card-laptop($clr-cyan);
+      
+      border-top: $space-4xs solid $clr-cyan;
     }
   }
   &:nth-child(2) {
-    @include card-mobile($clr-red);
+    border-top: $space-4xs solid $clr-red;
     @include laptop {
       grid-area: team;
-      @include card-laptop($clr-red);
+      
+      border-top: $space-4xs solid $clr-red;
     }
   }
   &:nth-child(3) {
-    @include card-mobile($clr-orange);
+    border-top: $space-4xs solid $clr-orange;
     @include laptop {
       grid-area: karma;
-      @include card-laptop($clr-orange);
+      
+      border-top: $space-4xs solid $clr-orange;
     }
   }
   &:nth-child(4) {
-    @include card-mobile($clr-blue);
+    border-top: $space-4xs solid $clr-blue;
     @include laptop {
       grid-area: calculator;
-      @include card-laptop($clr-blue);
+      
+      border-top: $space-4xs solid $clr-blue;
     }
   }
    
@@ -131,21 +131,14 @@ body {
   h2 {
     font-size: $fs-h2;
     color: $clr-title;
-    margin-block-end: $space-4xs;
-    // Media query at 1000px //
-    @include laptop {
-      margin-block-end: $space-3xs;
-    }
+    margin-block-end: $margin-h2;
+    
   }
   p {
     font-size: $fs-card;
     letter-spacing: 0.05em;
-    line-height: 1.85;
-    // Media query at 1000px //
-    @include laptop {
-      line-height: 1.9;
+    line-height: 1.9;
     }
-  }
 }
 
 

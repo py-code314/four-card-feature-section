@@ -45,17 +45,12 @@ body {
 /* Styles for intro section*/
 .intro {
   text-align: center;
-  margin-block-end: 4.6875rem;
-}
-@media (min-width: 62.5em) {
-  .intro {
-    margin-block-end: 3.875rem;
-  }
+  margin-block-end: clamp(3.875rem, 4.974rem - 1.221vw, 4.688rem);
 }
 
 /* Styles for page title */
 .intro__title {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.236rem + 1.127vw, 2.25rem);
   font-weight: 600;
   color: hsl(234, 12%, 34%);
   letter-spacing: 0.007em;
@@ -63,14 +58,11 @@ body {
 }
 .intro__title span {
   font-weight: 200;
+  display: block;
 }
 @media (min-width: 62.5em) {
   .intro__title {
-    font-size: 2.25rem;
     line-height: 1.45;
-  }
-  .intro__title span {
-    display: block;
   }
 }
 
@@ -90,107 +82,59 @@ body {
 /* Grid layout for cards */
 .cards {
   display: grid;
-  gap: 1.5rem;
+  gap: clamp(1.5rem, 1.368rem + 0.563vw, 1.875rem);
 }
 @media (min-width: 62.5em) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
     grid-template-areas: "... team ..." "supervisor team calculator" "supervisor karma calculator" "... karma ...";
-    gap: 1.875rem;
   }
 }
 
 /* Styling for an individual card */
-.card:nth-child(1) {
+.card {
   display: flex;
   flex-direction: column;
-  padding: 1.375rem 1.75rem 1.75rem;
-  gap: 2rem;
+  padding: clamp(1.375rem, 1.243rem + 0.563vw, 1.75rem) clamp(1.75rem, 1.662rem + 0.376vw, 2rem) clamp(1.75rem, 1.662rem + 0.376vw, 2rem);
+  gap: clamp(2rem, 1.824rem + 0.751vw, 2.5rem);
   background-color: hsl(0, 0%, 100%);
-  box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
+  box-shadow: 0 15px 30px 1px hsla(229, 6%, 66%, 0.5);
   border-radius: 0.4375rem;
+}
+.card:nth-child(1) {
   border-top: 0.25rem solid hsl(180, 62%, 55%);
 }
 @media (min-width: 62.5em) {
   .card:nth-child(1) {
     grid-area: supervisor;
-    display: flex;
-    flex-direction: column;
-    padding: 1.75rem 2rem 2rem;
-    gap: 2.5rem;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-    border-radius: 0.4375rem;
     border-top: 0.25rem solid hsl(180, 62%, 55%);
   }
 }
 .card:nth-child(2) {
-  display: flex;
-  flex-direction: column;
-  padding: 1.375rem 1.75rem 1.75rem;
-  gap: 2rem;
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-  border-radius: 0.4375rem;
   border-top: 0.25rem solid hsl(0, 78%, 62%);
 }
 @media (min-width: 62.5em) {
   .card:nth-child(2) {
     grid-area: team;
-    display: flex;
-    flex-direction: column;
-    padding: 1.75rem 2rem 2rem;
-    gap: 2.5rem;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-    border-radius: 0.4375rem;
     border-top: 0.25rem solid hsl(0, 78%, 62%);
   }
 }
 .card:nth-child(3) {
-  display: flex;
-  flex-direction: column;
-  padding: 1.375rem 1.75rem 1.75rem;
-  gap: 2rem;
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-  border-radius: 0.4375rem;
   border-top: 0.25rem solid hsl(34, 97%, 64%);
 }
 @media (min-width: 62.5em) {
   .card:nth-child(3) {
     grid-area: karma;
-    display: flex;
-    flex-direction: column;
-    padding: 1.75rem 2rem 2rem;
-    gap: 2.5rem;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-    border-radius: 0.4375rem;
     border-top: 0.25rem solid hsl(34, 97%, 64%);
   }
 }
 .card:nth-child(4) {
-  display: flex;
-  flex-direction: column;
-  padding: 1.375rem 1.75rem 1.75rem;
-  gap: 2rem;
-  background-color: hsl(0, 0%, 100%);
-  box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-  border-radius: 0.4375rem;
   border-top: 0.25rem solid hsl(212, 86%, 64%);
 }
 @media (min-width: 62.5em) {
   .card:nth-child(4) {
     grid-area: calculator;
-    display: flex;
-    flex-direction: column;
-    padding: 1.75rem 2rem 2rem;
-    gap: 2.5rem;
-    background-color: hsl(0, 0%, 100%);
-    box-shadow: 0 15px 30px 1px rgba(163, 165, 174, 0.5);
-    border-radius: 0.4375rem;
     border-top: 0.25rem solid hsl(212, 86%, 64%);
   }
 }
@@ -206,20 +150,10 @@ body {
 .card__details h2 {
   font-size: 1.25rem;
   color: hsl(234, 12%, 34%);
-  margin-block-end: 0.25rem;
-}
-@media (min-width: 62.5em) {
-  .card__details h2 {
-    margin-block-end: 0.5rem;
-  }
+  margin-block-end: clamp(0.25rem, 0.162rem + 0.376vw, 0.5rem);
 }
 .card__details p {
   font-size: 0.75rem;
   letter-spacing: 0.05em;
-  line-height: 1.85;
-}
-@media (min-width: 62.5em) {
-  .card__details p {
-    line-height: 1.9;
-  }
+  line-height: 1.9;
 }
