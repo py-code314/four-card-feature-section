@@ -130,6 +130,7 @@ body {
 @media (min-width: 48em) {
   .card img {
     width: 4rem;
+    height: 4rem;
   }
 }
 
