@@ -34,12 +34,7 @@ body {
 
 /* Max-width for the whole layout */
 .ai-tools {
-  max-inline-size: 19.4375rem;
-}
-@media (min-width: 62.5em) {
-  .ai-tools {
-    max-inline-size: 69.4375rem;
-  }
+  max-inline-size: clamp(19.438rem, 1.832rem + 75.117vw, 69.438rem);
 }
 
 /* Styles for intro section*/
@@ -54,16 +49,11 @@ body {
   font-weight: 600;
   color: hsl(234, 12%, 34%);
   letter-spacing: 0.007em;
-  margin-block-end: 1rem;
+  margin-block-end: 0.875rem;
 }
 .intro__title span {
   font-weight: 200;
   display: block;
-}
-@media (min-width: 62.5em) {
-  .intro__title {
-    line-height: 1.45;
-  }
 }
 
 /* Styles for page description */
@@ -72,7 +62,7 @@ body {
   line-height: 1.65;
   font-size: 0.9375rem;
 }
-@media (min-width: 62.5em) {
+@media (min-width: 48em) {
   .intro__description {
     max-inline-size: 55ch;
     margin-inline: auto;
@@ -84,7 +74,7 @@ body {
   display: grid;
   gap: clamp(1.5rem, 1.368rem + 0.563vw, 1.875rem);
 }
-@media (min-width: 62.5em) {
+@media (min-width: 48em) {
   .cards {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
@@ -105,43 +95,39 @@ body {
 .card:nth-child(1) {
   border-top: 0.25rem solid hsl(180, 62%, 55%);
 }
-@media (min-width: 62.5em) {
+@media (min-width: 48em) {
   .card:nth-child(1) {
     grid-area: supervisor;
-    border-top: 0.25rem solid hsl(180, 62%, 55%);
   }
 }
 .card:nth-child(2) {
   border-top: 0.25rem solid hsl(0, 78%, 62%);
 }
-@media (min-width: 62.5em) {
+@media (min-width: 48em) {
   .card:nth-child(2) {
     grid-area: team;
-    border-top: 0.25rem solid hsl(0, 78%, 62%);
   }
 }
 .card:nth-child(3) {
   border-top: 0.25rem solid hsl(34, 97%, 64%);
 }
-@media (min-width: 62.5em) {
+@media (min-width: 48em) {
   .card:nth-child(3) {
     grid-area: karma;
-    border-top: 0.25rem solid hsl(34, 97%, 64%);
   }
 }
 .card:nth-child(4) {
   border-top: 0.25rem solid hsl(212, 86%, 64%);
 }
-@media (min-width: 62.5em) {
+@media (min-width: 48em) {
   .card:nth-child(4) {
     grid-area: calculator;
-    border-top: 0.25rem solid hsl(212, 86%, 64%);
   }
 }
 .card img {
   align-self: end;
 }
-@media (min-width: 62.5em) {
+@media (min-width: 48em) {
   .card img {
     width: 4rem;
   }

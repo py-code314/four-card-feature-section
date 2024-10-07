@@ -6,21 +6,17 @@
 /* Styles for body */
 body {
   font-family: $ff-body;
-  padding: $space-7xl $space-lg;
+  padding: $space-xl $space-lg;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: $clr-bg-body;
-  color: $clr-body-text;  
+  color: $clr-body-text;
 }
 
 /* Max-width for the whole layout */
 .ai-tools {
-  max-inline-size: $card-width-mobile;
-  // Media query at 1000px //
-  @include laptop {
-    max-inline-size: $card-width-laptop;
-  }
+  max-inline-size: $card-width;
 }
 
 /* Styles for intro section*/
@@ -37,14 +33,10 @@ body {
   }
   color: $clr-title;
   letter-spacing: 0.007em;
-  margin-block-end: $space-xs;
+  margin-block-end: $space-md;
   span {
     font-weight: $fw-extralight;
     display: block;
-  }
-  // Media query at 1000px //
-  @include laptop {
-    line-height: 1.45; // Check to remove later
   }
 }
 
@@ -53,7 +45,7 @@ body {
   letter-spacing: 0.007em;
   line-height: 1.65;
   font-size: $fs-body;
-  // Media query at 1000px //
+  // Media query at 768px //
   @include laptop {
     max-inline-size: 55ch;
     margin-inline: auto;
@@ -63,18 +55,14 @@ body {
 /* Grid layout for cards */
 .cards {
   display: grid;
-  gap: $gap;  
-  // Media query at 1000px //
+  gap: $gap-grid;
+  // Media query at 768px //
   @include laptop {
     grid-template: {
-    columns: repeat(3, 1fr);
-    rows: repeat(4, auto);
-    areas: 
-    '... team ...'
-    'supervisor team calculator'
-    'supervisor karma calculator'
-    '... karma ...'
-    ;
+      columns: repeat(3, 1fr);
+      rows: repeat(4, auto);
+      areas: '... team ...' 'supervisor team calculator'
+        'supervisor karma calculator' '... karma ...';
     }
   }
 }
@@ -82,45 +70,34 @@ body {
 /* Styling for an individual card */
 .card {
   @include card;
-  // @include laptop {
-  //   @include card-laptop;
-  // }
   &:nth-child(1) {
-    border-top: $space-4xs solid $clr-cyan;
+    border-top: $space-sm solid $clr-cyan;
     @include laptop {
       grid-area: supervisor;
-      
-      border-top: $space-4xs solid $clr-cyan;
     }
   }
   &:nth-child(2) {
-    border-top: $space-4xs solid $clr-red;
+    border-top: $space-sm solid $clr-red;
     @include laptop {
       grid-area: team;
-      
-      border-top: $space-4xs solid $clr-red;
     }
   }
   &:nth-child(3) {
-    border-top: $space-4xs solid $clr-orange;
+    border-top: $space-sm solid $clr-orange;
     @include laptop {
       grid-area: karma;
-      
-      border-top: $space-4xs solid $clr-orange;
     }
   }
   &:nth-child(4) {
-    border-top: $space-4xs solid $clr-blue;
+    border-top: $space-sm solid $clr-blue;
     @include laptop {
       grid-area: calculator;
-      
-      border-top: $space-4xs solid $clr-blue;
     }
   }
-   
+
   img {
     align-self: end;
-    // Media query at 1000px //
+    // Media query at 768px //
     @include laptop {
       width: $image-width-laptop;
     }
@@ -132,15 +109,10 @@ body {
     font-size: $fs-h2;
     color: $clr-title;
     margin-block-end: $margin-h2;
-    
   }
   p {
     font-size: $fs-card;
     letter-spacing: 0.05em;
     line-height: 1.9;
-    }
+  }
 }
-
-
-
-

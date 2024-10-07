@@ -13,16 +13,9 @@
   
 }
 
-// Styling for cards - laptop
-// @mixin card-laptop {
-//   padding: $space-xl $space-3xl $space-3xl;
-//   gap: $space-4xl;
-  
-// }
-
 // Media query at 1000px
 @mixin laptop {
-  @media (min-width: 62.5em) {
+  @media (min-width: 48em) {
     @content;
   }
 }
